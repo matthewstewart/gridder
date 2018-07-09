@@ -10,11 +10,17 @@
   align-self: center;
 }
 
-.LandingPage .page-content h3 {
+
+.LandingPage .page-content .page-title {
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-size: 4em;
+  line-height: 0.7;  
 }
 
-
+.LandingPage .page-content .page-title small {
+  font-size: 0.4em;
+}
 
 @media (min-width: 768px) {
   .LandingPage { 
