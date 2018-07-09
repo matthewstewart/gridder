@@ -22,11 +22,12 @@ main {
 .bg-4 { background-color: rgb(170, 13, 13); }
 .bg-5 { background-color: rgb(148, 74, 40); }
 
-.text-1 { background-color: rgb(29,165,204); }
-.text-2 { background-color: rgb(68,134,153); }
-.text-3 { background-color: rgb(11,255,175); }
-.text-4 { background-color: rgb(255,85,75); }
-.text-5 { background-color: rgb(204,132,155); }
+.text-white { color: white;  }
+.text-1 { color: rgb(29,165,204); }
+.text-2 { color: rgb(68,134,153); }
+.text-3 { color: rgb(11,255,175); }
+.text-4 { color: rgb(255,85,75); }
+.text-5 { color: rgb(204,132,155); }
 
 /* Helpers */
 

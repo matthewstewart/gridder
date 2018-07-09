@@ -1,6 +1,6 @@
 .Header {
   display: grid;
-  grid-template-columns: 75px auto;
+  grid-template-columns: 75px 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 12px;
   color: white;
@@ -26,16 +26,22 @@
 }
 
 .Header nav {
+  align-self: stretch;
+  justify-self: stretch;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 75px 75px 1fr;
   grid-template-rows: 1fr;
-  grid-column-gap: 12px;
-  border-bottom: 1px solid rgb(220,220,220);  
+  grid-column-gap: 12px; 
 }
 
-.Header nav select {
+.Header nav a {
+  align-self: center;
+  justify-self: center;
+}
+
+/* .Header nav select {
   padding: 6px;
   font-size: 1.3em;
   border-color: rgba(0,0,0,0);
-}
+} */
 
