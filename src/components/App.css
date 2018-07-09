@@ -15,6 +15,7 @@ main {
 
 /* Colors */
 
+.bg-white { background-color: white; }
 .bg-1 { background-color: rgb(29,165,204); }
 .bg-2 { background-color: rgb(68,134,153); }
 .bg-3 { background-color: rgb(11,155,75); }
@@ -26,3 +27,8 @@ main {
 .text-3 { background-color: rgb(11,255,175); }
 .text-4 { background-color: rgb(255,85,75); }
 .text-5 { background-color: rgb(204,132,155); }
+
+/* Helpers */
+
+.mt-1 { margin-top: 12px; }
+.ml-1 { margin-left: 12px; }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 //import { Link } from 'react-router-dom';
+import shortid from 'shortid';
 import './GridContainer.css';
 
 class GridContainer extends Component {
@@ -14,7 +15,10 @@ class GridContainer extends Component {
     let children = [];
     for(let i = 0; i < gridLength; i++){
       children.push(
-        <div className="grid-cell"></div>
+        <div 
+          key={shortid.generate()}
+          className="grid-cell"
+        ></div>
       );
     }
     return (

@@ -6,7 +6,7 @@ class Header extends Component {
     return (
       <div className="Header bg-2">
         <div className="brand-container">
-          <div className="brand">Gridder</div>
+          <div className="brand">Grid</div>
         </div>
       </div>
     );
