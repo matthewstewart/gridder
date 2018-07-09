@@ -17,13 +17,13 @@ class Header extends Component {
         </div>
         <nav>
           <Link 
-            to="/grids/new"
+            to="/"
             className="text-white"
-          >New Grid</Link>
+          >Login</Link>
           <Link 
-            to="/test"
+            to="/"
             className="text-white"
-          >Test</Link>
+          >Signup</Link>
         </nav>
       </div>
     );

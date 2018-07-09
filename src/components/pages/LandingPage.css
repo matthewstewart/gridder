@@ -8,6 +8,11 @@
 .LandingPage .page-content {
   justify-self: center;
   align-self: center;
+  padding: 48px 24px;
+  border: 5px solid white;
+  -webkit-box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.3);
+  box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.3);  
 }
 
 
