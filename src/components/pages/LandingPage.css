@@ -1,0 +1,51 @@
+.LandingPage {
+  background-color: rgb(240, 240, 240);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 225px 1fr;    
+}
+
+.LandingPage form,
+.LandingPage .grid-panel {
+  align-self: stretch;
+  padding: 12px;
+  /* border: 1px solid black; */
+}
+
+.LandingPage .grid-panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;  
+  justify-self: stretch;
+  align-self: stretch;
+  padding: 12px;
+}
+
+.LandingPage .grid-panel {
+
+}
+
+/* .LandingPage .grid-panel .grid-container {
+  border: 1px solid black;
+} */
+
+@media (min-width: 768px) {
+  .LandingPage { 
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 1fr;    
+  }  
+} 
+
+@media (min-width: 1024px) {
+  .LandingPage {
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: repeat(1, 1fr);    
+  }
+}
+
+@media (min-width: 1400px) {
+  .LandingPage {
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: repeat(1, 1fr);    
+  }
+}

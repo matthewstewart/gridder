@@ -1,0 +1,36 @@
+.GridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  max-width: 300px;
+  max-height: 300px;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+.GridContainer .grid-cell {
+  border: 1px solid #ccc;
+}
+
+@media (min-width: 768px) {
+  .GridContainer { 
+    max-width: 450px;
+    max-height: 450px;    
+  }  
+} 
+
+@media (min-width: 1024px) {
+  .GridContainer { 
+    max-width: 700px;
+    max-height: 700px;    
+  } 
+}
+
+@media (min-width: 1400px) {
+  .GridContainer { 
+    max-width: 800px;
+    max-height: 800px;    
+  } 
+}

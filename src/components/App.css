@@ -1,0 +1,28 @@
+.App {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: [header-start] 55px [header-end content-start] auto [content-end];
+  /* grid-row-gap: 7px; */
+  align-items: stretch;
+  justify-items: stretch;
+}
+
+main {
+  display: grid;
+}
+
+/* Colors */
+
+.bg-1 { background-color: rgb(29,165,204); }
+.bg-2 { background-color: rgb(68,134,153); }
+.bg-3 { background-color: rgb(11,155,75); }
+.bg-4 { background-color: rgb(170, 13, 13); }
+.bg-5 { background-color: rgb(148, 74, 40); }
+
+.text-1 { background-color: rgb(29,165,204); }
+.text-2 { background-color: rgb(68,134,153); }
+.text-3 { background-color: rgb(11,255,175); }
+.text-4 { background-color: rgb(255,85,75); }
+.text-5 { background-color: rgb(204,132,155); }
