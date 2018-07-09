@@ -5,6 +5,13 @@
   grid-template-rows: 1fr;   
 }
 
+.LandingPage .page-content {
+  justify-self: center;
+  align-self: center;
+}
+
+
+
 @media (min-width: 768px) {
   .LandingPage { 
 
