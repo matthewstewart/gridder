@@ -2,7 +2,7 @@
   /* background-color: rgb(240, 240, 240); */
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 225px 1fr;    
+  grid-template-rows: 275px 1fr;    
 }
 
 .LandingPage form,
