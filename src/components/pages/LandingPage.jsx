@@ -6,9 +6,9 @@ class LandingPage extends Component {
 
   render() {
     return (
-      <div className="LandingPage">
+      <div className="LandingPage bg-2">
         <div className="page-content">
-          <h3 className="is-size-1">Gridder</h3>
+          <h3 className="is-size-1 text-white">Gridder</h3>
         </div>
       </div>
     );

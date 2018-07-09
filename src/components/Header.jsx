@@ -6,7 +6,7 @@ import './Header.css';
 class Header extends Component {
   render() {
     return (
-      <div className="Header bg-2">
+      <div className="Header bg-5">
         <div className="brand-container">
           <div className="brand">
             <Link 
