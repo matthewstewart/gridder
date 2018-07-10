@@ -1,5 +1,8 @@
 # Gridder
-A demo of CSS Grids that can be viewed at [http://grid.omniuncommons.org](http://grid.omniuncommons.org).  Currently cross platform.
+Work In Progress.  
+A React Web Application demo of persistent CSS Grids that works with an external API.  
+The demo can be viewed at [http://grid.omniuncommons.org](http://grid.omniuncommons.org).  
+Currently cross platform.
 
 ## Clone
 ```
