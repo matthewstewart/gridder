@@ -1,5 +1,5 @@
 # Gridder
-A demo of CSS Grids that can be viewed at (http://grid.omniuncommons.org)[http://grid.omniuncommons.org].
+A demo of CSS Grids that can be viewed at [http://grid.omniuncommons.org](http://grid.omniuncommons.org).
 
 ## Clone
 ```
