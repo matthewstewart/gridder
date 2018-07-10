@@ -58,7 +58,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header 
+          {...this.state}
+          logoutCurrentUser={this.logoutCurrentUser}
+        />
         <Router 
           {...this.state}
           loginCurrentUser={this.loginCurrentUser}

@@ -15,16 +15,29 @@ class Header extends Component {
             >Grid</Link>
           </div>
         </div>
-        <nav>
-          <Link 
-            to="/"
-            className="text-white"
-          >Login</Link>
-          <Link 
-            to="/"
-            className="text-white"
-          >Signup</Link>
-        </nav>
+        {(!this.props.isLoggedIn) ? (
+          <nav>
+            <Link 
+              to="/login"
+              className="text-white"
+            >Login</Link>
+            <Link 
+              to="/"
+              className="text-white"
+            >Signup</Link>
+          </nav>
+        ) : (
+          <nav>
+            <Link 
+              to="/"
+              className="text-white"
+            >Profile</Link>
+            <a 
+              onClick={this.props.logoutCurrentUser}
+              className="text-white"
+            >Logout</a>
+          </nav>          
+        )}  
       </div>
     );
   }
