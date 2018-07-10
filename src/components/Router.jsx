@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import NewGridPage from './pages/NewGridPage';
 import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
 import TestPage from './pages/TestPage';
 
 class Router extends Component {
@@ -32,6 +33,14 @@ class Router extends Component {
         />
       );
     };
+    const signupPage = (props) => {
+      return (
+        <SignupPage 
+          {...props}
+          {...this.props}
+        />
+      );
+    };
     const testPage = (props) => {
       return (
         <TestPage 
@@ -46,6 +55,7 @@ class Router extends Component {
           <Route exact path='/' component={landingPage}/>
           <Route exact path='/grids/new' component={newGridPage}/>
           <Route exact path='/login' component={loginPage}/>
+          <Route exact path='/signup' component={signupPage}/>
           <Route exact path='/test' component={testPage}/>
         </Switch>
       </main>

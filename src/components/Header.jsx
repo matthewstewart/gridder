@@ -22,7 +22,7 @@ class Header extends Component {
               className="text-white"
             >Login</Link>
             <Link 
-              to="/"
+              to="/signup"
               className="text-white"
             >Signup</Link>
           </nav>
