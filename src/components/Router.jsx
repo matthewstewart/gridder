@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import LandingPage from './pages/LandingPage';
-import NewGridPage from './pages/NewGridPage';
+import GridListPage from './pages/GridListPage';
+import GridNewPage from './pages/GridNewPage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import TestPage from './pages/TestPage';
@@ -17,9 +18,17 @@ class Router extends Component {
         />
       );
     };
-    const newGridPage = (props) => {
+    const gridListPage = (props) => {
       return (
-        <NewGridPage 
+        <GridListPage 
+          {...props}
+          {...this.props}
+        />
+      );
+    };
+    const gridNewPage = (props) => {
+      return (
+        <GridNewPage 
           {...props}
           {...this.props}
         />
@@ -53,7 +62,8 @@ class Router extends Component {
       <main>
         <Switch>
           <Route exact path='/' component={landingPage}/>
-          <Route exact path='/grids/new' component={newGridPage}/>
+          <Route exact path='/grids/new' component={gridNewPage}/>
+          <Route exact path='/grids' component={gridListPage}/>
           <Route exact path='/login' component={loginPage}/>
           <Route exact path='/signup' component={signupPage}/>
           <Route exact path='/test' component={testPage}/>

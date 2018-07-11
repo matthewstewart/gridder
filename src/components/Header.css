@@ -29,7 +29,7 @@
   align-self: stretch;
   justify-self: stretch;
   display: grid;
-  grid-template-columns: 75px 75px 1fr;
+  grid-template-columns: 75px 75px 75px 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 12px; 
 }

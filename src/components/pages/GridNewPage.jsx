@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 //import { Link } from 'react-router-dom';
-import './NewGridPage.css';
+import './GridNewPage.css';
 
 import GridContainer from '../GridContainer';
 import GridContainerForm from '../GridContainerForm';
 
-class NewGridPage extends Component {
+class GridNewPage extends Component {
 
   constructor(props) {
     super(props);
@@ -24,7 +24,7 @@ class NewGridPage extends Component {
 
   render() {
     return (
-      <div className="NewGridPage">
+      <div className="GridNewPage">
         <GridContainerForm 
           grid={this.state.grid}
           updateGrid={this.updateGrid}
@@ -40,4 +40,4 @@ class NewGridPage extends Component {
   }
 }
 
-export default NewGridPage;
+export default GridNewPage;

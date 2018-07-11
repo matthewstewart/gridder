@@ -6,17 +6,21 @@ import './Header.css';
 class Header extends Component {
   render() {
     return (
-      <div className="Header bg-5">
+      <div className="Header bg-dark">
         <div className="brand-container">
           <div className="brand">
             <Link 
               to="/"
               className="text-white"
-            >Grid</Link>
+            >Gridder</Link>
           </div>
         </div>
         {(!this.props.isLoggedIn) ? (
           <nav>
+            <Link 
+              to="/grids"
+              className="text-white"
+            >Grids</Link>
             <Link 
               to="/login"
               className="text-white"
@@ -28,6 +32,10 @@ class Header extends Component {
           </nav>
         ) : (
           <nav>
+            <Link 
+              to="/grids"
+              className="text-white"
+            >Grids</Link>
             <Link 
               to="/"
               className="text-white"

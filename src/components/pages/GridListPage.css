@@ -1,0 +1,47 @@
+.GridListPage {
+  /* background-color: rgb(240, 240, 240); */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;   
+}
+
+.GridListPage .page-content {
+  justify-self: center;
+  align-self: center;
+  padding: 48px 24px;
+  border: 5px solid white;
+  -webkit-box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.3);
+  box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.3);  
+}
+
+
+.GridListPage .page-content .page-title {
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-size: 4em;
+  line-height: 0.7;  
+}
+
+.GridListPage .page-content .page-title small {
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+  font-size: 0.4em;
+}
+
+@media (min-width: 768px) {
+  .GridListPage { 
+
+  }  
+} 
+
+@media (min-width: 1024px) {
+  .GridListPage {
+  
+  }
+}
+
+@media (min-width: 1400px) {
+  .GridListPage {
+  
+  }
+}

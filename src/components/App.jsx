@@ -31,6 +31,8 @@ class App extends Component {
     //console.log(config);
     axios.get('https://api.omniuncommons.org/api/dashboard', config)
     .then(res => {
+      console.log('Current User:');
+      console.log(res.data.user);
       this.setState({
         isLoggedIn: true,
         currentUser: res.data.user

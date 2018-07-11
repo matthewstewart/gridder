@@ -16,6 +16,8 @@ main {
 /* Colors */
 
 .bg-white { background-color: white; }
+.bg-black { background-color: black; }
+.bg-dark { background-color: rgb(40,40,40); }
 .bg-1 { background-color: rgb(29,165,204); }
 .bg-2 { background-color: rgb(68,134,153); }
 .bg-3 { background-color: rgb(11,155,75); }

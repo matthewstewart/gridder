@@ -1,4 +1,4 @@
-.NewGridPage {
+.GridNewPage {
   /* background-color: rgb(240, 240, 240); */
   display: grid;
   grid-template-columns: 1fr;
@@ -6,14 +6,14 @@
   transition: all 0.3s ease;    
 }
 
-.NewGridPage form,
-.NewGridPage .grid-panel {
+.GridNewPage form,
+.GridNewPage .grid-panel {
   align-self: stretch;
   padding: 12px;
   /* border: 1px solid black; */
 }
 
-.NewGridPage .grid-panel {
+.GridNewPage .grid-panel {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;  
@@ -22,30 +22,30 @@
   padding: 12px;
 }
 
-.NewGridPage .grid-panel {
+.GridNewPage .grid-panel {
 
 }
 
-/* .NewGridPage .grid-panel .grid-container {
+/* .GridNewPage .grid-panel .grid-container {
   border: 1px solid black;
 } */
 
 @media (min-width: 768px) {
-  .NewGridPage { 
+  .GridNewPage { 
     grid-template-columns: 300px 1fr;
     grid-template-rows: 1fr;    
   }  
 } 
 
 @media (min-width: 1024px) {
-  .NewGridPage {
+  .GridNewPage {
     grid-template-columns: 300px 1fr;
     grid-template-rows: repeat(1, 1fr);    
   }
 }
 
 @media (min-width: 1400px) {
-  .NewGridPage {
+  .GridNewPage {
     grid-template-columns: 300px 1fr;
     grid-template-rows: repeat(1, 1fr);    
   }
