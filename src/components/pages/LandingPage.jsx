@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './LandingPage.css';
 
 class LandingPage extends Component {
@@ -12,12 +11,6 @@ class LandingPage extends Component {
             Gridder<br/>
             <small>
               A CSS Grid Demo
-            </small><br/>
-            <small>
-              <Link
-                to="/"
-                className="text-1"
-              >Get Started</Link>
             </small>
           </div>
         </div>

@@ -1,8 +1,38 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './GridListPage.css';
+import Auth from '../modules/Auth';
+import axios from 'axios';
 
 class GridListPage extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      grids: []
+    };
+    this.fetchGrids = this.fetchGrids.bind(this);
+  }
+
+  fetchGrids() {
+    let config = {
+        'headers': {
+          'authorization': `Bearer ${Auth.getToken()}`,
+        }
+    };
+    //console.log(config);
+    axios.get('https://api.omniuncommons.org/grids', config)
+    .then(res => {
+      console.log('API Response:');
+      console.log(res.data);
+      this.setState({
+        grids: res.data.grids
+      });
+    });    
+  } 
+
+  componentDidMount() {
+    this.fetchGrids();
+  }
 
   render() {
     return (
@@ -11,13 +41,7 @@ class GridListPage extends Component {
           <div className="page-title text-white">
             Grid List<br/>
             <small>
-              A CSS Grid Demo
-            </small><br/>
-            <small>
-              <Link
-                to="/"
-                className="text-1"
-              >Get Started</Link>
+              Goes Here
             </small>
           </div>
         </div>

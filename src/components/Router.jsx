@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import LandingPage from './pages/LandingPage';
+import UserProfilePage from './pages/UserProfilePage';
 import GridListPage from './pages/GridListPage';
 import GridNewPage from './pages/GridNewPage';
 import LoginPage from './pages/LoginPage';
@@ -50,6 +51,16 @@ class Router extends Component {
         />
       );
     };
+
+    const userProfilePage = (props) => {
+      return (
+        <UserProfilePage 
+          {...props}
+          {...this.props}
+        />
+      );
+    };
+
     const testPage = (props) => {
       return (
         <TestPage 
@@ -58,10 +69,12 @@ class Router extends Component {
         />
       );
     };
+
     return (
       <main>
         <Switch>
           <Route exact path='/' component={landingPage}/>
+          <Route exact path='/profile' component={userProfilePage}/>
           <Route exact path='/grids/new' component={gridNewPage}/>
           <Route exact path='/grids' component={gridListPage}/>
           <Route exact path='/login' component={loginPage}/>

@@ -37,7 +37,7 @@ class Header extends Component {
               className="text-white"
             >Grids</Link>
             <Link 
-              to="/"
+              to="/profile"
               className="text-white"
             >Profile</Link>
             <a 
