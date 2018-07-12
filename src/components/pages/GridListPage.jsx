@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './GridListPage.css';
 import Auth from '../modules/Auth';
 import axios from 'axios';
+import shortid from 'shortid';
 
 class GridListPage extends Component {
 
@@ -25,7 +26,7 @@ class GridListPage extends Component {
       console.log('API Response:');
       console.log(res.data);
       this.setState({
-        grids: res.data.grids
+        grids: res.data.record
       });
     });    
   } 
@@ -35,16 +36,50 @@ class GridListPage extends Component {
   }
 
   render() {
+    let columns, rows, gridListPageStyles;
+    if(this.state.grids){
+      let gridCount = this.state.grids.length;
+      columns = rows = (Math.floor(Math.sqrt(gridCount))) + 1;
+      gridListPageStyles = {
+        'display': 'grid',
+        'gridTemplateRows': `repeat(${rows}, 1fr)`,
+        'gridTemplateColumns': `repeat(${columns}, 1fr)`, 
+      };
+    } else {
+      columns = rows = 1;
+      gridListPageStyles = {
+        'display': 'grid',
+        'gridTemplateRows': `1fr`,
+        'gridTemplateColumns': `1fr`, 
+      };      
+    }
+    let grids = this.state.grids.map((grid, index) => {
+      return (
+        <div className="grid-item" key={shortid.generate()}>
+          <div className="grid-item-container">
+            <h4 className="grid-title">
+              {grid.name}
+            </h4>
+            <p className="grid-description">{grid.description}</p>
+          </div>
+        </div>   
+      );
+    });
+    let titleGridItemStyles = {
+      'gridColumn': `1 / span ${columns}`,
+      'gridRow': '1 / 2',
+      'padding': '12px'
+    };
     return (
-      <div className="GridListPage bg-2">
-        <div className="page-content">
-          <div className="page-title text-white">
-            Grid List<br/>
-            <small>
-              Goes Here
-            </small>
+      <div className="GridListPage bg-2" style={gridListPageStyles}>
+        <div className="grid-item" style={titleGridItemStyles}>
+          <div className="grid-item-container">
+            <div className="page-title">
+              Grid List
+            </div>
           </div>
         </div>
+        {grids}
       </div>
     );
   }

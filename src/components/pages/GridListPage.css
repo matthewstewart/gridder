@@ -1,31 +1,44 @@
 .GridListPage {
-  /* background-color: rgb(240, 240, 240); */
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;   
+  /* background-color: rgb(240, 240, 240); */ 
 }
 
-.GridListPage .page-content {
-  justify-self: center;
-  align-self: center;
-  padding: 48px 24px;
-  border: 5px solid white;
+.GridListPage .grid-item {
+  justify-self: stretch;
+  align-self: stretch;
+  border: 2px solid white;
   -webkit-box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.3);
   -moz-box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.3);
   box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.3);  
+  display: grid;
 }
 
+.GridListPage .grid-item .grid-item-container {
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  color: white;
+}
 
-.GridListPage .page-content .page-title {
+.GridListPage .grid-item .grid-item-container .page-title {
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.3);
   text-align: center;
-  font-size: 4em;
-  line-height: 0.7;  
+  font-size: 3vmax;
+  line-height: 1.1;  
 }
 
-.GridListPage .page-content .page-title small {
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
-  font-size: 0.4em;
+.GridListPage .grid-item .grid-item-container .grid-title {
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-size: 3vmax;
+  line-height: 1.1;  
+}
+
+.GridListPage .grid-item .grid-item-container .grid-description {
+  margin-top: 10px;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-size: 2vmax;
+  line-height: 1.1;   
 }
 
 @media (min-width: 768px) {
