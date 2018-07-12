@@ -16,6 +16,7 @@
   justify-self: center;
   align-self: center;
   text-align: center;
+  display: grid;
   color: white;
 }
 

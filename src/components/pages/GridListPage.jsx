@@ -37,13 +37,13 @@ class GridListPage extends Component {
 
   render() {
     let columns, rows, gridListPageStyles;
+    let gridCount = this.state.grids ? this.state.grids.length : 0;
     if(this.state.grids){
-      let gridCount = this.state.grids.length;
       columns = rows = (Math.floor(Math.sqrt(gridCount))) + 1;
       gridListPageStyles = {
         'display': 'grid',
-        'gridTemplateRows': `repeat(${rows}, 1fr)`,
-        'gridTemplateColumns': `repeat(${columns}, 1fr)`, 
+        'gridTemplateRows': `repeat(${parseInt(rows, 10)}, 1fr)`,
+        'gridTemplateColumns': `repeat(${parseInt(columns, 10)}, 1fr)`, 
       };
     } else {
       columns = rows = 1;
@@ -54,14 +54,32 @@ class GridListPage extends Component {
       };      
     }
     let grids = this.state.grids.map((grid, index) => {
+      let gridItemStyles = {
+        'display': 'grid',
+        'gridTemplateRows': `repeat(${parseInt(grid.rows, 10) + 1}, 1fr)`,
+        'gridTemplateColumns': `repeat(${parseInt(grid.columns, 10)}, 1fr)`,         
+      };
+      let gridItemTitleStyles = {
+        'alignSelf': 'center',
+        'justifySelf': 'center',
+        'gridColumn': `1 / span ${parseInt(grid.columns, 10)}`,
+        'gridRow': '1 / 2',
+        'padding': '12px'
+      };
+      let gridChildren = new Array(parseInt(grid.rows, 10) * parseInt(grid.columns, 10));
+      for(let i = 0; i < gridChildren.length; i++){
+        gridChildren[i] = (
+          <div className="grid-item" key={shortid.generate()}></div>
+        );
+      }
       return (
-        <div className="grid-item" key={shortid.generate()}>
-          <div className="grid-item-container">
+        <div className="grid-item" key={shortid.generate()} style={gridItemStyles}>
+          <div className="grid-item-container" style={gridItemTitleStyles}>
             <h4 className="grid-title">
               {grid.name}
             </h4>
-            <p className="grid-description">{grid.description}</p>
           </div>
+          {gridChildren}
         </div>   
       );
     });
