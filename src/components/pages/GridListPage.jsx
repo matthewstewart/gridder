@@ -56,7 +56,7 @@ class GridListPage extends Component {
     let grids = this.state.grids.map((grid, index) => {
       let gridItemStyles = {
         'display': 'grid',
-        'gridTemplateRows': `repeat(${parseInt(grid.rows, 10) + 1}, 1fr)`,
+        'gridTemplateRows': `75px repeat(${parseInt(grid.rows, 10)}, 1fr)`,
         'gridTemplateColumns': `repeat(${parseInt(grid.columns, 10)}, 1fr)`,         
       };
       let gridItemTitleStyles = {
